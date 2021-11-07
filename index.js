@@ -131,11 +131,12 @@ async function convert(data, header = true, allColumns = false) {
   }
 
   // Add all other rows:
-  /*
+  
   csvInput.push(
     ...data.map(row => columnNames.map(column => row[column])),
   );
-  */
+  
+  /*
   
   const allData = []
   for(let i = 0; i < data.length; i++) {
@@ -146,6 +147,7 @@ async function convert(data, header = true, allColumns = false) {
   for(let i = 0; i < allData.length; i++) {
     csvInput.push(allData[i])
   }
+  */
 
   return await csv.stringify(csvInput);
 }
