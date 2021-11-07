@@ -137,15 +137,9 @@ async function convert(data, header = true, allColumns = false) {
   );
    */
 
-  
-  const allData = []
   for(let i = 0; i < data.length; i++) {
     const row = data[i]
-    allData.push(columnNames.map(column => row[column]))
-  }
-
-  for(let i = 0; i < allData.length; i++) {
-    csvInput.push(allData[i])
+    csvInput.push(columnNames.map(column => row[column]))
   }
  
 
